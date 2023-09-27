@@ -8,20 +8,20 @@ async function main() {
         console.log(newPost);
 
         // // test show all post
-        // let posts = index();
-        // console.log(posts);
+        let posts = await index();
+        console.log(posts);
 
         // // test show detail post by id
-        // let post = await show(1);
-        // console.log(post);
+        let post = await show(1);
+        console.log(post);
 
         // // test update post by id
-        // let updatedPost = await update(1, 'title baru dua');
-        // console.log(updatedPost);
+        let updatedPost = await update(1, 'title hasul update', 'body hasil update');
+        console.log(updatedPost);
 
         // // test delete post by id
-        // let deletedPost = await destroy(1);
-        // console.log(deletedPost);
+        let deletedPost = await destroy(3);
+        console.log(deletedPost);
     } catch (err) {
         console.log(err);
     }
